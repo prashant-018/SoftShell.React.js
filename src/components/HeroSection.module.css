@@ -1,0 +1,87 @@
+.heroSection {
+  background-color: #0A2A66;
+  color: white;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.heroImageWrapper {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 20px;
+
+}
+
+.heroLogo {
+  height: 60px;
+  width:auto;
+
+  object-fit: contain;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 1;
+  padding-top: 40px;
+}
+
+.heroHeadline {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.heroSubheading {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.heroButton {
+  background-color: #FFD700;
+  color: black;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.heroButton:hover {
+  background-color: #e6c200;
+  transform: translateY(-3px);
+}
+
+
+
+@media (max-width: 768px) {
+  .heroHeadline {
+    font-size: 2.3rem;
+  }
+
+  .heroSubheading {
+    font-size: 1.1rem;
+  }
+
+  .heroButton {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+
+  .heroLogo {
+    height: 45px;
+  }
+}
+

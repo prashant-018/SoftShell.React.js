@@ -1,0 +1,118 @@
+:root {
+  --bg: #ffffff;
+  --text: #0A2A66;
+  --bot-bg: #e6ffe6;
+  --user-bg: #d0ebff;
+  --btn-bg: #0A2A66;
+  --btn-hover: #0847a0;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  --bg: #1c1c1c;
+  --text: #f0f0f0;
+  --bot-bg: #263a2d;
+  --user-bg: #203850;
+  --btn-bg: #274d9a;
+  --btn-hover: #1b3a7a;
+}
+
+.chatbox {
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.chatbox .title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.chatWindow {
+  background: #f2f2f2;
+  height: 280px;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+}
+
+.userMsg, .botMsg {
+  max-width: 80%;
+  word-wrap: break-word;
+  padding: 10px 14px;
+  border-radius: 16px;
+  margin: 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.userMsg {
+  background-color: var(--user-bg);
+  align-self: flex-end;
+  text-align: left;
+  border-bottom-right-radius: 4px;
+}
+
+.botMsg {
+  background-color: var(--bot-bg);
+  align-self: flex-start;
+  text-align: left;
+  border-bottom-left-radius: 4px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.questionBtn {
+  padding: 10px 16px;
+  background-color: var(--btn-bg);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.questionBtn:hover {
+  background-color: var(--btn-hover);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .chatbox {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .chatWindow {
+    height: 220px;
+    padding: 10px;
+  }
+
+  .userMsg, .botMsg {
+    font-size: 0.88rem;
+    padding: 8px 12px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
